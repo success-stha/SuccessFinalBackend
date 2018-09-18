@@ -48,7 +48,7 @@ public class UserResource {
 
 		User user = new User(null, record.get("firstName"), record.get("middleName"), record.get("lastName"),
 				record.get("dateOfBirth"), district, record.get("address"), record.get("gender"), bloodGroup,
-				record.get("phoneNo"), record.get("email"), passwordEncoder.encode(record.get("password")));
+				record.get("phoneNo"), record.get("email"),(record.get("password")));
 		userRepository.save(user);
 
 	}
